@@ -55,6 +55,7 @@
                     <runOrder>Alphabetical</runOrder>
                     <includes>
                         <include>**/*CukesRunner.java</include>
+                        <include>**/*FailedTestRunner.java</include>
                         <!--  <rerunFailingTestsCount>2</rerunFailingTestsCount> -->
                     </includes>
                 </configuration>
