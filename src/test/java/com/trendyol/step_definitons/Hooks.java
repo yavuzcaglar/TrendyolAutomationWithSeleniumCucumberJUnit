@@ -1,4 +1,4 @@
-package com.trendyol.steps_definitons;
+package com.trendyol.step_definitons;
 
 import com.trendyol.utilites.Driver;
 import io.cucumber.java.After;
