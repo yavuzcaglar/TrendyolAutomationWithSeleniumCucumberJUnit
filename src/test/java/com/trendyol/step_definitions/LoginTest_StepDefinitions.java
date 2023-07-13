@@ -38,8 +38,13 @@ public class LoginTest_StepDefinitions {
     }
 
     @Then("Verify that the user is logged in")
-    public void verify_that_the_user_is_logged_in() throws InterruptedException {
+    public void verify_that_the_user_is_logged_in(){
         basePage.verifyThatUserLoggedIn();
+    }
+
+    @Then("Verify that the user is not logged in and error message appears")
+    public void verify_that_the_user_is_not_logged_in_and_error_message_appears() {
+        loginPage.verifyErrorMessageIsDisplayed();
     }
 
 }

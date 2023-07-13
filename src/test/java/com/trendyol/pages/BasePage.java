@@ -33,9 +33,8 @@ public class BasePage {
         BrowserUtils.clickWithJS(element);
     }
 
-    public void verifyThatUserLoggedIn() throws InterruptedException {
+    public void verifyThatUserLoggedIn(){
         BrowserUtils.hover(hesabimOption);
-        Thread.sleep(2000);
         Assert.assertTrue(cikisYapButton.isDisplayed());
     }
 

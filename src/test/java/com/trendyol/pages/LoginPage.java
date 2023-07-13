@@ -25,17 +25,19 @@ public class LoginPage extends BasePage{
     @CacheLookup
     private WebElement girisYapButton;
 
+    @FindBy(xpath = "//span[@class='message']")
+    @CacheLookup
+    private WebElement errorMessage;
+
     public void verifyUserOnTheLoginPage(){
         Assert.assertTrue(girisYapMessage.isDisplayed());
     }
 
     public void enterEmailInEmailBox(String email){
-        email = ConfigurationReader.get("email");
         enterEmailBox.sendKeys(email);
     }
 
     public void enterPasswordInPasswordBox(String password){
-        password = ConfigurationReader.get("password");
         enterPasswordBox.sendKeys(password);
     }
 
@@ -47,7 +49,10 @@ public class LoginPage extends BasePage{
         enterEmailInEmailBox(email);
         enterPasswordInPasswordBox(password);
         clickGirisYapButton();
+    }
 
+    public void verifyErrorMessageIsDisplayed(){
+        Assert.assertTrue(errorMessage.isDisplayed());
     }
 
 
